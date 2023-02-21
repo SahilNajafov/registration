@@ -5,9 +5,17 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class ConnectionB {
-    public static Connection ab () throws SQLException {
 
-         String url = "jdbc:postgresql://localhost:5432/registration";
-        return DriverManager.getConnection(url, "postgres", "123SsAaBgcd00!");
+    private static Connection con;
+
+
+
+    public static Connection getCon () throws SQLException, ClassNotFoundException {
+        if(con!=null && !con.isClosed())return con;
+        Class.forName("org.postgresql.Driver");
+        String url = "jdbc:postgresql://localhost:5432/registration";
+        con = DriverManager.getConnection(url, "postgres", "123SsAaBgcd00!");
+        return con;
+
     }
 }

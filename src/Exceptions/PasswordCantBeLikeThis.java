@@ -1,4 +1,4 @@
 package Exceptions;
 
-public class PasswordMustHaveMinEightCharacter extends RuntimeException{
+public class PasswordCantBeLikeThis extends RuntimeException{
 }

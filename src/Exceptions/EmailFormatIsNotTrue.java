@@ -1,2 +1,4 @@
-package Exceptions;public class EmailFormatIsNotTrue {
+package Exceptions;
+
+public class EmailFormatIsNotTrue extends RuntimeException{
 }

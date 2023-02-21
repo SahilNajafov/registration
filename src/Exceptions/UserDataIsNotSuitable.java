@@ -1,2 +1,4 @@
-package Exceptions;public class UserDataIsNotSuitable {
+package Exceptions;
+
+public class UserDataIsNotSuitable extends RuntimeException{
 }
